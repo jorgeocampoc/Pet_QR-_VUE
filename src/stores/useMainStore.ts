@@ -14,17 +14,20 @@ export const useMainStore = defineStore("main", () => {
     email.value = value;
   };
   const setRole = (value: string) => {
-    role.value = value;
-    switch (value) {
-      case "user":
-        navUser.value = [...navUserOpt];
-        break;
-      case "admin":
-        navUser.value = [...navAdminOpt];
-        break;
+    console.log(value)
+    if (value) {
+      role.value = value;
+      switch (value) {
+        case "user":
+          navUser.value = [...navUserOpt];
+          break;
+        case "admin":
+          navUser.value = [...navAdminOpt];
+          break;
 
-      default:
-        break;
+        default:
+          break;
+      }
     }
   };
 

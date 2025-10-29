@@ -18,11 +18,9 @@ export function usePostRequest<T, R>() {
       const { data } = await axios.post(urlBase.value + url, body, {
         withCredentials: true,
       });
-      console.log(data)
       msg.value = getMsg(data.message);
       results.value = data;
       notifySuccess(msg.value);
-      console.log('dioo')
     } catch (error: any) {
       console.log(error)
       msg.value = getMsg(error?.response?.data?.message || "");

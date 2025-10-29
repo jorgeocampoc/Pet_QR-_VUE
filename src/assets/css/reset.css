@@ -1,0 +1,35 @@
+body {
+  font-family: var(--font-primary) !important;
+}
+
+li {
+  list-style: none;
+}
+
+th {
+  color: var(--dark-color) !important;
+  text-align: center !important;
+  vertical-align: middle;
+  width: 50px;
+}
+th,
+td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+thead tr th {
+  font-size: 0.9rem;
+}
+
+tbody tr th {
+  font-weight: 500;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+
+input{
+  font-size: 0.9rem !important;
+}

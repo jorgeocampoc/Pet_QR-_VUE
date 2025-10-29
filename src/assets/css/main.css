@@ -1,0 +1,83 @@
+@import "./reset.css";
+@import "./variables.css";
+
+.full-screen {
+  width: 100vw !important;
+  height: 100vh !important;
+}
+
+.main-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  padding: 1.5rem 0rem;
+}
+
+.main-border {
+  border-radius: 1rem;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.ps-10 {
+  padding-left: 6rem !important;
+}
+
+.p-10 {
+  padding: 3rem !important;
+}
+.pe-10 {
+  padding-right: 3rem !important;
+}
+
+.cursor:hover {
+  cursor: pointer !important;
+}
+
+.text-orange {
+  color: var(--orange-color) !important;
+}
+
+.border-dark-main {
+  border: 1px solid grey !important;
+  border-radius: 1rem;
+}
+
+.disabled-form {
+  pointer-events: none !important;
+  opacity: 0.6 !important;
+}
+
+.abs-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.bg-orange {
+  background-color: var(--orange-color) !important;
+}
+
+.iconFont:hover {
+  color: gray !important;
+}
+
+.bg-blue {
+  background: var(--blue-2) !important;
+}
+
+.btn-blue{
+  background-color: var(--blue-2) !important;
+  color:aliceblue !important;
+  border-color: var(--blue-2) !important;
+  color:aliceblue !important;
+}
+.btn-blue:hover{
+  background-color: var(--blue-2-dark) !important;
+  color:aliceblue !important;
+  border-color: var(--blue-2-dark) !important;
+  color:aliceblue !important;
+}

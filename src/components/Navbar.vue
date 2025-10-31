@@ -2,26 +2,29 @@
     <nav class="navbar navbar-expand-lg bg-blue" v-if="!isLoading">
         <div class="container-fluid">
             <a class="navbar-brand ms-4" href="#"><img class="rounded-circle" src="../assets/logo.jpg" alt="image"
-                    width="50"></a>
+                    width="50">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="fa-solid fa-bars text-light"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item ms-3" v-for="(inp, i) in list" :key="i" @click="changeView(inp)">
+                <div class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-between">
+                    <div class="nav-item ms-3" v-for="(inp, i) in list" :key="i" @click="changeView(inp)">
                         <a class="nav-link text-uppercase text-light fs-6" aria-current="page"
                             :class="{ activeLink: currentItem === inp }" href="#">{{
                                 inp }}</a>
-                    </li>
-                </ul>
-                <span class="me-5 text-light fw-bolder  fs-5">
+                    </div>
+                </div>
+                <span class="me-5 text-light fw-bolder  fs-5 hidden-custom">
                     {{ email }}
                 </span>
-                <button class="me-5 btn btn-outline-light" @click="logOut">
-                    <span>Log out</span>
-                </button>
+                <div class="custom-ms">
+                    <button class="me-5 btn btn-outline-light" @click="logOut">
+                        <span>Log out</span>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
@@ -71,5 +74,16 @@ watch(role, (newRole) => {
     text-decoration: underline;
     text-underline-offset: 7px;
     font-size: 1.2rem !important;
+}
+
+@media (max-width: 991.98px) {
+    .hidden-custom {
+        display: none !important;
+    }
+
+    .custom-ms {
+        margin-left: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
 }
 </style>

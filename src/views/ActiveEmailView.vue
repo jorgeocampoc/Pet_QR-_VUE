@@ -33,7 +33,6 @@ onMounted(async () => {
     } catch (error: any) {
         console.log(error)
         dataValue.value = error?.response.data || {};
-        console.log(dataValue.value)
         currentComponent.value = ErrorVerify
 
     } finally {

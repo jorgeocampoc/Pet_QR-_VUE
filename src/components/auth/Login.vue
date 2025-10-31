@@ -1,7 +1,8 @@
 <template>
-    <div class="content-form bg-light main-border p-5 animate__animated animate__fadeInRight"
+    <div class="col-10 bg-light main-border p-5 animate__animated animate__fadeInRight col-xl-4 col-lg-5 col-md-10 position-relative"
         :class="{ 'disabled-form': isLoading }">
         <Qr />
+        <Spinner class="abs-center" color="bg-orange" v-if="isLoading"/>
         <div class="main-title">Sign in to Qr Pets</div>
         <form @submit.prevent="onSubmit" class="form">
             <div v-for="(inp, index) in inputs" :key="index">
@@ -41,7 +42,7 @@ import { useMainStore } from '../../stores/useMainStore';
 import { loginSchema } from '../../validations/loginSchema';
 import type { LoginForm } from '../../types/login.form';
 import { useField, useForm } from 'vee-validate';
-import { Qr, Tooltips } from '../../components';
+import { Qr, Tooltips, Spinner } from '../../components';
 import { getAutoComplete } from '../composables/userAutoComplete';
 import { usePostRequest } from '../../helpers/PostAuth';
 import { useRouter } from 'vue-router';
@@ -102,7 +103,4 @@ const disabledBtn = computed(() =>
     background-position: center;
 }
 
-.content-form {
-    width: 30%;
-}
 </style>

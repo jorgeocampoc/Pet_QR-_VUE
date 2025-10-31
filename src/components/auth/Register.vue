@@ -1,5 +1,5 @@
 <template>
-    <div class="content-form position-relative bg-light main-border p-5 animate__animated animate__fadeInRight"
+    <div class="col-11 position-relative bg-light main-border p-5 animate__animated animate__fadeInRight col-xl-4 col-lg-5 col-md-10"
         :class="{ 'disabled-form': isLoading }">
         <Spinner class="abs-center" v-if="isLoading" />
         <Qr />

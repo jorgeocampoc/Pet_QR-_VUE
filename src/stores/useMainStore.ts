@@ -14,7 +14,6 @@ export const useMainStore = defineStore("main", () => {
     email.value = value;
   };
   const setRole = (value: string) => {
-    console.log(value)
     if (value) {
       role.value = value;
       switch (value) {

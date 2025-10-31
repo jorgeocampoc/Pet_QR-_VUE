@@ -7,7 +7,7 @@
 }
 
 .main-title {
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 4vw, 2rem);
   text-transform: uppercase;
   font-weight: 600;
   text-align: center;
@@ -69,15 +69,15 @@
   background: var(--blue-2) !important;
 }
 
-.btn-blue{
+.btn-blue {
   background-color: var(--blue-2) !important;
-  color:aliceblue !important;
+  color: aliceblue !important;
   border-color: var(--blue-2) !important;
-  color:aliceblue !important;
+  color: aliceblue !important;
 }
-.btn-blue:hover{
+.btn-blue:hover {
   background-color: var(--blue-2-dark) !important;
-  color:aliceblue !important;
+  color: aliceblue !important;
   border-color: var(--blue-2-dark) !important;
-  color:aliceblue !important;
+  color: aliceblue !important;
 }

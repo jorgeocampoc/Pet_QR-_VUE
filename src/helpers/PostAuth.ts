@@ -25,7 +25,6 @@ export function usePostRequest<T, R>() {
       console.log(error)
       msg.value = getMsg(error?.response?.data?.message || "");
       notifyError(msg.value);
-      console.log(error);
     } finally {
       isLoading.value = false;
     }

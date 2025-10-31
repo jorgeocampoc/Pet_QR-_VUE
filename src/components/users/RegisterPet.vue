@@ -6,7 +6,7 @@
             <div
                 class="d-flex justify-content-center gap-5 flex-wrap  border-dark-main   mx-5 py-5  shadow bg-blue position-relative">
                 <Spinner v-if="isLoading" class="abs-center" color="bg-orange" />
-                <div v-for="(inp, i) in inputs" :key="i" class="col-3">
+                <div v-for="(inp, i) in inputs" :key="i" class="col-md-4 col-xl-3 col-10">
                     <Label :title="inp.label" class="text-light"></Label> <small v-if="inp.important"><i
                             class="fa-solid fa-asterisk text-danger"></i></small>
                     <Tooltips :msg="inp?.error.value || ''" v-if="inp.error.value" />
@@ -21,13 +21,13 @@
                             <i v-if="inp.error.value" class="fa-solid fa-circle-xmark text-danger"></i>
                         </span>
                     </div>
-                    <div v-if="inp.name == 'species'">
+                    <div v-if="inp.name == 'species'" class="pb-4">
                         <select v-model="species" class="form-select" aria-label="Select a species">
                             <option disabled value="">Select a species</option>
                             <option v-for="(esp, i) in especiesData" :key="i" :value="esp">{{ esp }}</option>
                         </select>
                     </div>
-                    <div v-if="inp.name == 'gender'">
+                    <div v-if="inp.name == 'gender'" class="pb-4">
                         <select v-model="gender" class="form-select" aria-label="Select a species">
                             <option disabled value="">Select a gender</option>
                             <option v-for="(esp, i) in genders" :key="i" :value="esp">{{ esp }}</option>
@@ -43,7 +43,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 m-auto text-center pt-5">
+            <div class="col-md-4 col-xl-3 col-12 m-auto text-center py-5">
                 <button type="submit" class=" btn btn-blue " style="width: 20rem;" :disabled="disableBtn">
                     <span v-if="!isLoading">QR generate</span>
                     <span v-if="isLoading"><i class="fa-solid fa-paw"></i></span>

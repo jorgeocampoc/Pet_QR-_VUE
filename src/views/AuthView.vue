@@ -1,6 +1,6 @@
 <template>
-    <div class="main full-screen d-flex flex-wrap flex-column justify-content-center ps-10 ">
-        <Login v-if="mainStore.formAuth == 'signIn'" />
+    <div class="main full-screen d-flex flex-wrap  justify-content-lg-start justify-content-xl-start justify-content-md-center justify-content-center ps-lg-5 align-items-center">
+        <Login v-if="mainStore.formAuth == 'signIn'"/>
         <Register v-if="mainStore.formAuth == 'signUp'" />
     </div>
 </template>

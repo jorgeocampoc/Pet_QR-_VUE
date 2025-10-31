@@ -4,7 +4,7 @@
         <ShowQr v-if="modal == 'img'" :qr="qr" @close="handleClose" />
         <EditPet v-if="modal == 'update' && pet" @close="handleClose" :data="pet" />
         <DeletePet v-if="modal == 'delete' && pet" @close="handleClose" :pet="pet" />
-        <div class="px-5 animate__animated animate__fadeIn overflow-y-auto" style="max-height: 75vh;">
+        <div class="animate__animated animate__fadeIn overflow-y-auto mx-5" style="max-height: 75vh;">
             <table class="table table-light shadow table-responsive table-striped table-hover" v-if="!isLoading">
                 <thead>
                     <tr>
@@ -110,7 +110,6 @@ const copyUrl = async (id: string, i: number) => {
     } catch (error) {
         console.log(error)
     }
-    console.log(API_BASE_URL_FRONT)
 }
 
 

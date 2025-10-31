@@ -2,7 +2,7 @@
     <teleport to="body">
         <div class="modal fade show animate__animated animate__fadeIn" id="createUser" tabIndex="-1"
             style="display: block;" aria-hidden="false">
-            <div class="modal-dialog modal-dialog-centered  modal-xl" :class="{ 'disabled-form': isLoading }">
+            <div class="modal-dialog modal-dialog-centered  modal-xl modal-fullscreen-lg-down" :class="{ 'disabled-form': isLoading }">
                 <div class="modal-content bg-blue position-relative">
                     <Spinner v-if="isLoading" color="bg-orange" class="abs-center" />
                     <div class="modal-header m-auto border-bottom-0">
@@ -13,7 +13,7 @@
                         <form @submit.prevent="onSubmit">
                             <div class="d-flex justify-content-center gap-5 flex-wrap mx-5 py-5 ">
                                 <!-- <Spinner  class="abs-center" color="bg-orange" /> -->
-                                <div v-for="(inp, i) in inputs" :key="i" class="col-3">
+                                <div v-for="(inp, i) in inputs" :key="i" class="col-md-4 col-xl-3 col-10">
                                     <Label :title="inp.label" class="text-light"></Label> <small v-if="inp.important"><i
                                             class="fa-solid fa-asterisk text-danger"></i></small>
                                     <Tooltips :msg="inp?.error.value || ''" v-if="inp.error.value" />
@@ -29,14 +29,14 @@
                                             <i v-if="inp.error.value" class="fa-solid fa-circle-xmark text-danger"></i>
                                         </span>
                                     </div>
-                                    <div v-if="inp.name == 'species'">
+                                    <div v-if="inp.name == 'species'" class="pb-4">
                                         <select v-model="species" class="form-select" aria-label="Select a species">
                                             <option disabled value="">Select a species</option>
                                             <option v-for="(esp, i) in especiesData" :key="i" :value="esp">{{ esp }}
                                             </option>
                                         </select>
                                     </div>
-                                    <div v-if="inp.name == 'gender'">
+                                    <div v-if="inp.name == 'gender'" class="pb-4">
                                         <select v-model="gender" class="form-select" aria-label="Select a species">
                                             <option disabled value="">Select a gender</option>
                                             <option v-for="(esp, i) in genders" :key="i" :value="esp">{{ esp }}</option>

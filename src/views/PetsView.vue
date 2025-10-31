@@ -1,15 +1,15 @@
 <template>
-    <div class="bg-blue full-screen d-flex justify-content-center align-items-center flex-wrap" v-if="!isLoading">
+    <div class="bg-blue full-screen d-flex justify-content-center align-items-center flex-wrap p-5" v-if="!isLoading">
         <div class="card">
             <div class="main-title">
                 {{ results?.pet?.name }}
             </div>
-            <div class="d-flex flex-wrap justify-content-evenly px-5 pb-5 gap-3 align-items-center">
-                <div class="col-4">
+            <div class="d-flex flex-wrap justify-content-evenly  gap-3 align-items-center px-5 pb-5">
+                <div class="col-md-10 col-lg-5">
                     <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9nc3xlbnwwfHwwfHx8MA%3D%3D&fm=jpg&q=60&w=3000"
                         alt="" class="img-fluid img-thumbnail rounded-4">
                 </div>
-                <div class="col">
+                <div class="col-md-10 col-lg-6">
                     <p>
                         <strong>Owner: </strong> <span> {{ results?.pet?.user?.name + ' ' + results?.pet?.user?.lastName }}
                         </span>

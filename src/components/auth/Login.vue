@@ -51,8 +51,8 @@ const { handleSubmit, errors } = useForm<LoginForm>({
     validationSchema: loginSchema
 })
 const router = useRouter()
-const { value: email, errorMessage: errorEmail, meta: emailMeta } = useField<string>('email', undefined, { initialValue: 'joryorch4000@gmail.com' })
-const { value: password, errorMessage: errorPassword, meta: passwordMeta } = useField<string>('password', undefined, { initialValue: 'aA1$1111' })
+const { value: email, errorMessage: errorEmail, meta: emailMeta } = useField<string>('email', undefined, { initialValue: '' })
+const { value: password, errorMessage: errorPassword, meta: passwordMeta } = useField<string>('password', undefined, { initialValue: '' })
 const inputs = [
     {
         name: 'email',
